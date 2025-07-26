@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-nanumpenbrush: var(--font-nanum-brush-script);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,10 +29,16 @@ body {
 * {
   -webkit-touch-callout: none;
   -webkit-user-callout: none;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none; */
   -webkit-user-drag: none;
   -webkit-user-modify: none;
   -webkit-highlight: none;
+}
+
+.footer {
+  svg path {
+    fill: var(--foreground);
+  }
 }
 
 .save-the-date-container {
@@ -1221,5 +1228,14 @@ body {
 
   svg.active .svg-elem-111 {
     fill: var(--foreground);
+  }
+
+  h1 {
+    opacity: 0;
+  }
+
+  h1.active {
+    opacity: 1;
+    transition: opacity 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 5s;
   }
 }
