@@ -8,8 +8,11 @@ const nanumBrushScript = Nanum_Brush_Script({
 });
 
 export const metadata: Metadata = {
-  title: "💗 KIMDONGHEE PUMP IT UP 💗",
-  description: "💗💗💗💗💗💗💗💗💗💗",
+  title: "💗 JAESEOK DONGHEE 💗",
+  description: "🌴 재석동희 결혼잔치에 초대합니다 🏝️",
+  openGraph: {
+    images: "https://kimdongheepumpitup.love/og.png",
+  },
 };
 
 export default function SaveTheDateLayout({
