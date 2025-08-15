@@ -6,12 +6,12 @@ import Photos from "./components/Photos";
 
 const SaveTheDatePage = () => {
   return (
-    <main>
+    <main className="h-screen overflow-y-auto overflow-x-hidden snap-mandatory snap-y">
       <div className="relative">
-        <section className="min-h-dvh items-center justify-center flex flex-col">
+        <section className="min-h-screen items-center justify-center flex flex-col snap-start pb-10">
           <Hero />
         </section>
-        <section className="min-h-screen items-center justify-center flex flex-col">
+        <section className="min-h-screen items-center justify-center flex flex-col snap-start pb-30">
           <InView
             variants={{
               hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
@@ -19,6 +19,7 @@ const SaveTheDatePage = () => {
             }}
             viewOptions={{ margin: "0px 0px -200px 0px" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
+            once
           >
             <p className="text-center text-xl">
               저희 두 사람이
@@ -31,7 +32,7 @@ const SaveTheDatePage = () => {
             </p>
           </InView>
         </section>
-        <section className="min-h-screen items-center justify-center flex flex-col">
+        <section className="min-h-screen items-center justify-center flex flex-col snap-start pb-30">
           <InView
             variants={{
               hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
@@ -39,6 +40,7 @@ const SaveTheDatePage = () => {
             }}
             viewOptions={{ margin: "0px 0px -200px 0px" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
+            once
           >
             <div className="flex flex-col items-center text-center">
               <p className="text-xl">
@@ -57,7 +59,7 @@ const SaveTheDatePage = () => {
                 href="https://smore.im/form/J0o0lFm0Pn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline flex items-center text-lg mt-4"
+                className="underline flex items-center text-lg mt-4"
               >
                 잔치 참석 여부 응답하고 안내 받기{" "}
                 <ExternalLinkIcon className="inline-block ml-1" size={16} />
@@ -65,10 +67,10 @@ const SaveTheDatePage = () => {
             </div>
           </InView>
         </section>
-        <section className="min-h-screen items-center justify-center flex flex-col">
+        <section className="min-h-screen items-center justify-center flex flex-col snap-start pb-10">
           <Photos />
         </section>
-        <section className="min-h-[36rem] items-center justify-center flex flex-col footer">
+        <section className="min-h-screen items-center justify-center flex flex-col footer snap-start pb-30">
           <Footer />
         </section>
       </div>

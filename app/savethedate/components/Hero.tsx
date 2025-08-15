@@ -14,11 +14,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="save-the-date-container h-[80dvh] flex items-center justify-center">
+    <div className="save-the-date-container flex items-center justify-center">
       <div className="relative">
         <h1
           className={cn(
-            "flex-none text-5xl font-nanumpenbrush text-center text-balance",
+            "flex-none text-5xl md:text-6xl font-nanumpenbrush text-center text-balance",
             isActive && "active"
           )}
         >
