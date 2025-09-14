@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Nanum_Brush_Script } from "next/font/google";
+import { ThemeProvider } from "../components/ThemeProvider";
 
 const nanumBrushScript = Nanum_Brush_Script({
   variable: "--font-nanum-brush-script",
@@ -21,6 +22,15 @@ export default function SaveTheDateLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className={`${nanumBrushScript.variable} antialiased`}>{children}</div>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <div className={`${nanumBrushScript.variable} antialiased`}>
+        {children}
+      </div>
+    </ThemeProvider>
   );
 }

@@ -1,5 +1,6 @@
 import { ExternalLinkIcon } from "lucide-react";
 import { InView } from "../components/InView";
+import AccountInfo from "./components/AccountInfo";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Photos from "./components/Photos";
@@ -70,6 +71,21 @@ const SaveTheDatePage = () => {
         <section className="min-h-screen items-center justify-center flex flex-col snap-start pb-10">
           <Photos />
         </section>
+
+        <section className="min-h-screen items-center justify-center flex flex-col snap-start pb-30">
+          <InView
+            variants={{
+              hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+              visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+            }}
+            viewOptions={{ margin: "0px 0px -200px 0px" }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            once
+          >
+            <AccountInfo />
+          </InView>
+        </section>
+
         <section className="min-h-screen items-center justify-center flex flex-col footer snap-start pb-30">
           <Footer />
         </section>
